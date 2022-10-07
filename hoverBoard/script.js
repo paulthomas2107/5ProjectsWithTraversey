@@ -1,5 +1,4 @@
 const container = document.getElementById('container');
-const colors = ['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71'];
 const SQUARES = 500;
 
 for (let i = 0; i < SQUARES; i++) {
@@ -22,5 +21,10 @@ function removeColor(element) {
 }
 
 function getRandomColor() {
-  return colors[Math.floor(Math.random() * colors.length)];
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
